@@ -1,8 +1,8 @@
 import { invalid } from '@angular/compiler/src/render3/view/util';
 import { Component, OnInit} from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Post } from '../post.model';
-import { PostsService } from '../posts.service';
+import { Post } from '../post/post.model';
+import { PostsService } from '../post/post.service';
 
 
 @Component({
