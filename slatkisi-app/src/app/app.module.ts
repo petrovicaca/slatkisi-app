@@ -13,6 +13,10 @@ import { PostsCreateComponent } from './posts-create/posts-create.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { PostsListComponent } from './posts-list/posts-list.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { LoginComponent } from './auth/login/login.component';
+import { ProfileComponent } from './profile/profile.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { PostsListComponent } from './posts-list/posts-list.component';
     PostsCreateComponent,
     HeaderComponent,
     PostsListComponent,
-    PostsListComponent
+    PostsListComponent,
+    SignupComponent,
+    LoginComponent,
+    ProfileComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
