@@ -22,7 +22,6 @@ export class PostsListComponent implements OnInit, OnDestroy {
       this.posts = posts;
     });
 
-
   }
 
   ngOnDestroy(){

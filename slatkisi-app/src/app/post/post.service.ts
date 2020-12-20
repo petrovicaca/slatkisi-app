@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Post } from './post.model';
 import { Subject } from 'rxjs';
-import { db } from '../../../../NodeJS/db.js';
+import { db } from '../../../NodeJS/db.js';
 
 @Injectable({providedIn: 'root'})
 export class PostsService {
@@ -12,7 +12,14 @@ export class PostsService {
   getPosts(){
     return [...this.posts];
     //return db.collection.find();
-  }
+    /*
+    db.collection("posts").find({}).toArray(function(err, result) {
+      if (err) throw err;
+      return result;
+      db.close();*/
+  //});
+};
+
 
   getPostsUpdateListener(){
     return this.postsUpdated.asObservable();
