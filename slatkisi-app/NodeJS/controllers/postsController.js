@@ -33,8 +33,11 @@ router.get('/:id', (req, res) => {
 // -------------------------------------------------------POST NEW
 router.post('/', (req, res) =>{
   var emp = new Post({
-    name: req.body.name,
-    salary: req.body.salary
+
+    // Šta Mongo baza dobija iz tela zahteva
+    title: req.body.title,
+    content: req.body.content
+
   });
   emp.save((err, doc) => {
     if(!err){
@@ -46,15 +49,17 @@ router.post('/', (req, res) =>{
 });
 
 // -------------------------------------------------------EDIT OLD
-router.get('/:id', (req, res) => {
+router.put('/:id', (req, res) => {
   // find all from collection
   if(!ObjectId.isValid(req.params.id)){
     return res.status(400).send('No record with given id: ${re.params.id}');
   }
 
   var emp = {
-    name: req.body.name,
-    salary: req.body.salary
+
+    title: req.body.title,
+    content: req.body.content
+
   };
 
   Post.findByIdAndUpdate(req.params.id, { $set: emp}, { new: true}, (err, doc) => {

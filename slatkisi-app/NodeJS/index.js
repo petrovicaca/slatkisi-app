@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require('cors');
 
 const { mongoose } = require('./db.js');
 var postsController = require('./controllers/postsController.js');

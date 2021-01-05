@@ -12,12 +12,12 @@ export class PostsService {
   getPosts(){
     return [...this.posts];
     //return db.collection.find();
-    /*
+/*
     db.collection("posts").find({}).toArray(function(err, result) {
       if (err) throw err;
       return result;
-      db.close();*/
-  //});
+      db.close();
+    });*/
 };
 
 
